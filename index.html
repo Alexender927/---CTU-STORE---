@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTU Store - Trang chủ</title>
+    <link rel="stylesheet" href="./css/trangchu.css">
+</head>
+<body>
+    <script>
+        const items = document.querySelectorAll('.reveal');
+        let index = 0;
+    
+        document.addEventListener('click', () => {
+            if (index < items.length) {
+                items[index].classList.add('active');
+                index++;
+            }
+        });
+    </script>
+    
+
+
+<header class="navbar">
+    <div class="logo">
+        <img src="./IMAGES/logo-ctu.jpg" alt="CTU Store Logo">
+        <span>CTU STORE</span>
+    </div>
+
+    <ul class="menu">
+        <li><a href="./index.html">Trang chủ</a></li>
+        <li><a href="./HTML/sanpham.html">Sản phẩm</a></li>
+        <li><a href="./HTML/giohang.html">Giỏ hàng</a></li>
+        <li><a href="./HTML/danhgia.html">Đánh giá</a></li>
+        <li><a href="./HTML/lienhe.html">Liên hệ</a></li>
+        <li><a href="./HTML/dangnhap.html">Đăng nhập</a></li>
+        <li><a href="./HTML/dangky.html">Đăng ký</a></li>
+    </ul>
+</header>
+
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Công nghệ hiện đại<br>Cho cuộc sống thông minh</h1>
+        <p>CTU Store – Nơi hội tụ sản phẩm công nghệ chính hãng, giá tốt</p>
+        <a href="./HTML/sanpham.html" class="btn-main">Khám phá ngay</a>
+        <div class="hero-features">
+            <span>✔ Chính hãng 100%</span>
+            <span>🚚 Giao nhanh 24h</span>
+            <span>🛡 Bảo hành 12 tháng</span>
+        </div>
+        
+    </div>
+</section>
+
+
+<section class="container">
+    <h2 class="section-title">Sản phẩm nổi bật</h2>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="https://www.didongmy.com/vnt_upload/product/09_2025/iphone_17_blue_thumb_didongmy_1.jpg" alt="iPhone 17">
+            <h3>iPhone 17 256GB</h3>
+            <p class="price">24.000.000 đ</p>
+            <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+            <img src="./IMAGES/Macbook_Air_M1.jpg" alt="MacBook Air M1">
+            <h3>MacBook Air M1</h3>
+            <p class="price">15.499.000 đ</p>
+            <button>Mua ngay</button>
+        </div>
+
+        <div class="product-card">
+            <img src="./IMAGES/tainghe.jpg" alt="Tai nghe gaming">
+            <h3>Tai nghe GAMING</h3>
+            <p class="price">3.999.000 đ</p>
+            <button>Mua ngay</button>
+        </div>
+        <div class="product-card">
+            <img src="./IMAGES/chuot-cong-thai-hoc.jbg.webp" alt="Chuột công thái học logitech">
+            <h3>Chuột Logitech công thái học </h3>
+            <p class="price">1.350.000đ</p>
+            <button>Mua ngay</button>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="./IMAGES/ban-phim-co.jbg.webp" alt="Bàn phím cơ">
+        <h3>Bàn phím cơ </h3>
+        <p class="price">1.350.000đ</p>
+        <button>Mua ngay</button>
+        
+    </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 CTU STORE – Công nghệ cho tương lai</p>
+</footer>
+
+</body>
+</html>

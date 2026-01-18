@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đánh giá sản phẩm | CTU STORE</title>
+    <link rel="stylesheet" href="../css/danhgia.css">
+</head>
+<body>
+
+<nav>
+    <ul class="menu">
+        <li><a href="../index.html">Trang chủ</a></li>
+        <li><a href="./sanpham.html">Sản phẩm</a></li>
+        <li><a href="./giohang.html">Giỏ hàng</a></li>
+        <li><a href="./danhgia.html">Đánh giá</a></li>
+        <li><a href="./lienhe.html">Liên hệ</a></li>
+        <li><a href="./dangnhap.html">Đăng nhập</a></li>
+        <li><a href="./dangky.html">Đăng ký</a></li>
+    </ul>
+</nav>
+
+<header class="header">
+    <h1>Đánh giá sản phẩm</h1>
+    <p>Hãy chia sẻ trải nghiệm của bạn</p>
+</header>
+
+<div class="review-box">
+    <label>Họ tên</label>
+    <input type="text" id="name" placeholder="Nhập tên của bạn">
+
+    <label>Đánh giá</label>
+    <div class="stars">
+        <span onclick="chonSao(1)">★</span>
+        <span onclick="chonSao(2)">★</span>
+        <span onclick="chonSao(3)">★</span>
+        <span onclick="chonSao(4)">★</span>
+        <span onclick="chonSao(5)">★</span>
+    </div>
+
+    <label>Nội dung đánh giá</label>
+    <textarea id="comment" placeholder="Nhận xét về sản phẩm..."></textarea>
+
+    <button onclick="guiDanhGia()">Gửi đánh giá</button>
+</div>
+
+<h2 class="title">Đánh giá của khách hàng</h2>
+
+<div id="review-list">
+
+    <div class="review-item">
+        <h3>Nguyễn Thế Anh</h3>
+        <div class="star-show">★★★★★</div>
+        <p>
+            Mình đã mua Iphone 17 256GB tại CTU STORE và cảm thấy rất hài lòng.
+            Sản phẩm mới nguyên seal, đúng mô tả, giao hàng nhanh và đóng gói kỹ.
+            Nhân viên tư vấn nhiệt tình, hỗ trợ tốt.
+        </p>
+    </div>
+
+    <div class="review-item">
+        <h3>Đặng Thị Nhàn </h3>
+        <div class="star-show">★★★★☆</div>
+        <p>
+            AirPods 4 dùng rất ổn, âm thanh tốt, pin lâu.
+            Giá hợp lý, chỉ hơi chậm giao 1 ngày nhưng chấp nhận được.
+        </p>
+    </div>
+
+    <div class="review-item">
+        <h3>Lê Minh Tú </h3>
+        <div class="star-show">★★★★★</div>
+        <p>
+            Mua Macbook Air M3 tại CTU STORE rất yên tâm.
+            Nhân viên hỗ trợ rõ ràng, giao đúng hẹn, website dễ dùng.
+        </p>
+    </div>
+
+    <div class="review-item">
+        <h3>Phạm Quốc Tấn</h3>
+        <div class="star-show">★★★★★</div>
+        <p>
+            Đây là cửa hàng mình đánh giá cao nhất hiện tại.
+            Giá rõ ràng, sản phẩm chính hãng, chăm sóc khách hàng tốt.
+            Sẽ tiếp tục ủng hộ lâu dài.
+        </p>
+    </div>
+
+</div>
+
+<!-- VÌ SAO KHÁCH HÀNG CHỌN CTU STORE -->
+<section class="why-choose">
+    <h2>Vì sao khách hàng chọn CTU STORE?</h2>
+
+    <div class="why-grid">
+        <div class="why-item">
+            <h3>🚚 Giao hàng nhanh</h3>
+            <p>Đóng gói cẩn thận, giao đúng hẹn trên toàn quốc.</p>
+        </div>
+
+        <div class="why-item">
+            <h3>💎 Chính hãng 100%</h3>
+            <p>Sản phẩm đầy đủ bảo hành, hóa đơn rõ ràng.</p>
+        </div>
+
+        <div class="why-item">
+            <h3>💬 Hỗ trợ tận tâm</h3>
+            <p>Tư vấn nhiệt tình trước và sau khi mua.</p>
+        </div>
+
+        <div class="why-item">
+            <h3>🔄 Đổi trả dễ dàng</h3>
+            <p>Hỗ trợ đổi trả trong 7 ngày nếu lỗi.</p>
+        </div>
+    </div>
+</section>
+
+<script src="danhgia.js"></script>
+</body>
+</html>
+

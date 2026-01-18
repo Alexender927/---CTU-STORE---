@@ -1,0 +1,521 @@
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* ===== MENU ===== */
+nav {
+    background: #000;
+    padding: 15px 60px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #00d4ff;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(90deg, #0d6efd, #00d4ff);
+    padding: 50px 60px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ===== FORM ĐÁNH GIÁ ===== */
+.review-box {
+    width: 420px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.95);
+    color: #000;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.review-box label {
+    font-weight: 600;
+}
+
+.review-box input,
+.review-box textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.review-box input:focus,
+.review-box textarea:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 10px rgba(13,110,253,0.4);
+}
+
+/* ===== SAO ===== */
+.stars {
+    display: flex;
+    gap: 6px;
+}
+
+.stars span {
+    font-size: 28px;
+    cursor: pointer;
+    color: #ccc;
+    transition: 0.2s;
+}
+
+.stars span.active,
+.stars span:hover {
+    color: gold;
+    transform: scale(1.2);
+}
+
+/* ===== BUTTON ===== */
+.review-box button {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(90deg, #0d6efd, #00d4ff);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== TIÊU ĐỀ DANH SÁCH ===== */
+.title {
+    max-width: 1200px;
+    margin: 30px auto 20px;
+    padding-left: 20px;
+    font-size: 26px;
+    text-shadow: 0 0 12px rgba(0,212,255,0.7);
+}
+
+/* ===== DANH SÁCH ĐÁNH GIÁ (GRID 3 CỘT) ===== */
+#review-list {
+    max-width: 1200px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ===== CARD ĐÁNH GIÁ ===== */
+.review-item {
+    background: #ffffff;
+    color: #000;
+    border-radius: 14px;
+    padding: 22px;
+    border-top: 5px solid #00bcd4;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.18);
+}
+
+/* ===== TÊN KHÁCH ===== */
+.review-item h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+    color: #0b4f57;
+}
+
+/* ===== SAO HIỂN THỊ ===== */
+.star-show {
+    margin: 8px 0 12px;
+    font-size: 18px;
+    color: #ffb400;
+}
+
+/* ===== NỘI DUNG ===== */
+.review-item p {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #333;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    #review-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    #review-list {
+        grid-template-columns: 1fr;
+    }
+
+    .review-box {
+        width: 90%;
+    }
+}
+
+
+
+/* =====================================================
+   NÂNG CẤP GIAO DIỆN ĐÁNH GIÁ – DÁN CUỐI CSS
+   ===================================================== */
+
+/* Header gọn – dịu – chuyên nghiệp hơn */
+.header {
+    background: linear-gradient(90deg, #0d6efd, #00bcd4);
+    padding: 35px 60px;
+}
+
+.header h1 {
+    font-size: 34px;
+}
+
+.header p {
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+/* Nền dịu hơn, đỡ gắt */
+body {
+    background: linear-gradient(180deg, #102a33, #1f3b44);
+}
+
+/* Khu vực form + đánh giá chung 1 layout */
+.review-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* Form đánh giá đứng yên khi scroll */
+.review-box {
+    margin: 0;
+    position: sticky;
+    top: 120px;
+}
+
+/* Tiêu đề đánh giá khách hàng nổi bật hơn */
+.title {
+    max-width: 100%;
+    margin: 0 0 25px;
+    font-size: 28px;
+    color: #eafcff;
+    text-shadow: 0 0 15px rgba(0,212,255,0.6);
+}
+
+/* Danh sách đánh giá: grid đẹp, thoáng */
+#review-list {
+    margin: 0;
+}
+
+/* Card đánh giá nhìn sang hơn */
+.review-item {
+    border-top: 5px solid #00d4ff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .review-section {
+        grid-template-columns: 1fr;
+    }
+
+    .review-box {
+        position: relative;
+        top: 0;
+        margin-bottom: 40px;
+    }
+}
+.why-choose {
+    margin: 80px auto;
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+}
+
+.why-choose h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.why-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.why-item {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 14px;
+    font-size: 16px;
+    backdrop-filter: blur(6px);
+}
+/* === HIỂN THỊ 4 ĐÁNH GIÁ CÙNG 1 HÀNG === */
+#review-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Card đánh giá */
+.review-item {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+}
+
+/* Tên khách hàng */
+.review-item h3 {
+    margin: 0 0 8px;
+    color: #0077b6;
+    font-size: 18px;
+}
+
+/* Sao đánh giá */
+.star-show {
+    color: #f4b400;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Nội dung */
+.review-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+    #review-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #review-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   POWERPOINT EFFECT – REVIEW PAGE (ADD LAST)
+   ===================================================== */
+
+/* ===== HIỆU ỨNG TIÊU ĐỀ ===== */
+.header h1,
+.header p {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: pptTitleDown 0.8s ease forwards;
+}
+
+.header p {
+    animation-delay: 0.15s;
+}
+
+@keyframes pptTitleDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== FORM ĐÁNH GIÁ HIỆN RA ===== */
+.review-box {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.95);
+    animation: pptFormIn 0.8s ease forwards;
+}
+
+@keyframes pptFormIn {
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* ===== CÁC Ô INPUT ===== */
+.review-box input,
+.review-box textarea {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: pptInputUp 0.5s ease forwards;
+}
+
+.review-box input { animation-delay: 0.2s; }
+.review-box textarea { animation-delay: 0.3s; }
+
+@keyframes pptInputUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== SAO ĐÁNH GIÁ ===== */
+.stars span {
+    opacity: 0;
+    transform: scale(0);
+    animation: pptStarPop 0.4s ease forwards;
+}
+
+.stars span:nth-child(1){animation-delay:0.2s;}
+.stars span:nth-child(2){animation-delay:0.3s;}
+.stars span:nth-child(3){animation-delay:0.4s;}
+.stars span:nth-child(4){animation-delay:0.5s;}
+.stars span:nth-child(5){animation-delay:0.6s;}
+
+@keyframes pptStarPop {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== NÚT GỬI ĐÁNH GIÁ ===== */
+.review-box button {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: pptBtnUp 0.6s ease forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes pptBtnUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== TIÊU ĐỀ DANH SÁCH ===== */
+.title {
+    opacity: 0;
+    transform: translateX(40px);
+    animation: pptTitleSlide 0.7s ease forwards;
+}
+
+@keyframes pptTitleSlide {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== CARD ĐÁNH GIÁ – XUẤT HIỆN LẦN LƯỢT ===== */
+.review-item {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+    animation: pptCardIn 0.7s ease forwards;
+}
+
+.review-item:nth-child(1){animation-delay:0.1s;}
+.review-item:nth-child(2){animation-delay:0.2s;}
+.review-item:nth-child(3){animation-delay:0.3s;}
+.review-item:nth-child(4){animation-delay:0.4s;}
+.review-item:nth-child(5){animation-delay:0.5s;}
+.review-item:nth-child(6){animation-delay:0.6s;}
+.review-item:nth-child(7){animation-delay:0.7s;}
+.review-item:nth-child(8){animation-delay:0.8s;}
+
+@keyframes pptCardIn {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ===== HOVER CARD NHƯ SLIDE ===== */
+.review-item:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* ===== PHẦN "VÌ SAO CHỌN CHÚNG TÔI" ===== */
+.why-item {
+    opacity: 0;
+    transform: rotateX(90deg);
+    animation: pptFlipIn 0.6s ease forwards;
+}
+
+.why-item:nth-child(1){animation-delay:0.2s;}
+.why-item:nth-child(2){animation-delay:0.35s;}
+.why-item:nth-child(3){animation-delay:0.5s;}
+.why-item:nth-child(4){animation-delay:0.65s;}
+
+@keyframes pptFlipIn {
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}

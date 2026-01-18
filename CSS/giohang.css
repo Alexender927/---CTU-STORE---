@@ -1,0 +1,429 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #eaedf0;
+    color: #343131;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: linear-gradient(90deg, #0b5d66, #0f7c87);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    color: rgb(110, 197, 244);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* MENU */
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 18px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,0.18);
+}
+
+/* ===== KHUNG GIỎ HÀNG ===== */
+.cart-box {
+    background: white;
+    width: 92%;
+    margin: 35px auto;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: linear-gradient(90deg, #0b5d66, #0f7c87);
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+}
+
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+tr:hover td {
+    background: #eef8f9;
+}
+
+/* ===== INPUT ===== */
+input[type="number"] {
+    width: 60px;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    text-align: center;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #0b5d66;
+}
+
+/* ===== NÚT XÓA ===== */
+.delete {
+    background: linear-gradient(135deg, #ff4d4d, #c40000);
+    color: white;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.delete:hover {
+    transform: scale(1.15);
+}
+
+/* ===== TỔNG TIỀN ===== */
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total b {
+    font-size: 20px;
+}
+
+.total p {
+    color: #e63946;
+}
+
+/* ===== THANH TOÁN ===== */
+.checkout {
+    background: linear-gradient(135deg, #0a8f08, #13c313);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout:hover {
+    transform: scale(1.07);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(90deg, #0b5d66, #09484f);
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+/* ===== CART BOX NÂNG CẤP GIAO DIỆN ===== */
+.cart-box {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Bảng */
+.cart-box table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Header bảng */
+.cart-box thead th {
+    background: linear-gradient(135deg, #0a6c74, #0fb9b1);
+    color: #fff;
+    padding: 14px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* Bo góc header */
+.cart-box thead th:first-child {
+    border-top-left-radius: 10px;
+}
+.cart-box thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* DÒNG NGANG – PHẦN BẠN YÊU CẦU */
+.cart-box tbody tr {
+    border-bottom: 2px solid #e0f2f1;
+}
+
+/* Ô dữ liệu */
+.cart-box td {
+    padding: 16px 14px;
+    text-align: center;
+    font-size: 15px;
+    background: #ffffff;
+}
+
+/* ĐƯỜNG NGANG CÓ MÀU + HIỆU ỨNG */
+.cart-box tbody tr:not(:last-child) td {
+    border-bottom: 2px solid #b2dfdb;
+}
+
+/* Hover từng hàng */
+.cart-box tbody tr:hover td {
+    background: #f1fbfa;
+    transition: 0.25s;
+}
+
+/* Ô số lượng */
+.cart-box input[type="number"] {
+    width: 55px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #0fb9b1;
+    text-align: center;
+}
+
+/* Nút xóa */
+.cart-box .delete {
+    background: linear-gradient(135deg, #ff4d4d, #e60000);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.cart-box .delete:hover {
+    opacity: 0.85;
+}
+
+/* Tổng cộng */
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 3px dashed #0fb9b1;
+}
+
+.total p {
+    font-size: 18px;
+    color: #d60000;
+    font-weight: bold;
+}
+
+/* Nút thanh toán */
+.checkout {
+    background: linear-gradient(135deg, #00c853, #00a844);
+    color: #fff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.checkout:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* ================================ */
+/* CART EFFECT – ADD TO END OF CSS */
+/* ================================ */
+
+/* HIỆU ỨNG TOÀN KHUNG GIỎ HÀNG */
+.cart-box {
+    background: #fff;
+    margin: 40px auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    animation: cartAppear 0.8s ease forwards;
+}
+
+@keyframes cartAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* BẢNG GIỎ HÀNG */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: tableFade 0.9s ease;
+}
+
+@keyframes tableFade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* HEADER BẢNG */
+th {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: #fff;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+/* DÒNG SẢN PHẨM */
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* HIỆU ỨNG HÀNG – POWERPOINT SLIDE */
+tr {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: rowSlide 0.6s ease forwards;
+}
+
+tr:nth-child(2){animation-delay:0.1s;}
+tr:nth-child(3){animation-delay:0.15s;}
+tr:nth-child(4){animation-delay:0.2s;}
+tr:nth-child(5){animation-delay:0.25s;}
+tr:nth-child(6){animation-delay:0.3s;}
+tr:nth-child(7){animation-delay:0.35s;}
+tr:nth-child(8){animation-delay:0.4s;}
+
+@keyframes rowSlide {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* HOVER DÒNG SẢN PHẨM */
+tr:hover {
+    background: #f5f9ff;
+    transform: scale(1.01);
+    transition: 0.3s ease;
+}
+
+/* INPUT SỐ LƯỢNG */
+input[type="number"] {
+    width: 60px;
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0,123,255,0.4);
+}
+
+/* NÚT XÓA */
+button.delete {
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button.delete:hover {
+    transform: rotate(90deg) scale(1.15);
+    background: #d90000;
+}
+
+/* TỔNG TIỀN */
+.total {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: totalUp 0.6s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes totalUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.total p {
+    font-size: 20px;
+    color: #333;
+}
+
+/* NÚT THANH TOÁN – SLIDE NHẤN MẠNH */
+button.checkout {
+    padding: 12px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #28a745, #00d084);
+    transition: 0.4s;
+}
+
+button.checkout:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}

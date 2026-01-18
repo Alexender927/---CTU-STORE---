@@ -1,0 +1,297 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.header {
+    background: #0d1117;
+    color: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00e5ff;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #00e5ff;
+    color: #000;
+}
+
+
+.banner {
+    background: linear-gradient(120deg, #141e30, #243b55);
+    padding: 90px 20px;
+    text-align: center;
+    color: white;
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.about {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f5f7fa;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+.login-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.login-box {
+    width: 360px;
+    padding: 30px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 11px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 15px;
+}
+
+.input-group input:focus {
+    border-color: #00e5ff;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #0d1117;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: #00e5ff;
+    color: black;
+}
+
+.register {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+.footer {
+    background: #0d1117;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= HIỆU ỨNG POWERPOINT ================= */
+
+/* 1. Hiệu ứng xuất hiện từ dưới lên (slide + fade) */
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. Hiệu ứng zoom nhẹ */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 3. Áp dụng cho toàn bộ section */
+section {
+    animation: slideUpFade 0.8s ease forwards;
+}
+
+/* 4. Header trượt từ trên xuống */
+.header {
+    animation: slideUpFade 0.7s ease forwards;
+    animation-delay: 0.1s;
+}
+
+/* 5. Banner zoom nhẹ như slide PowerPoint */
+.banner,
+.banner-box {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+/* 6. Các khối nội dung */
+.about,
+.login-section,
+.contact,
+.auth {
+    animation: slideUpFade 0.9s ease forwards;
+}
+
+/* 7. Form nổi lên + bóng */
+.login-box,
+.form,
+.contact-box,
+.contact-info,
+.contact-form {
+    animation: zoomIn 0.7s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover,
+.form:hover,
+.contact-info:hover,
+.contact-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* 8. Input có hiệu ứng focus */
+input,
+textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #075b64;
+    box-shadow: 0 0 8px rgba(7,91,100,0.4);
+    transform: scale(1.02);
+}
+
+/* 9. Nút bấm như PowerPoint */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* 10. Menu trượt mượt khi hover */
+.menu li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+/* 11. Footer mờ dần */
+.footer {
+    animation: slideUpFade 1s ease forwards;
+    opacity: 0.9;
+}
+
+/* ================= HẾT HIỆU ỨNG ================= */
